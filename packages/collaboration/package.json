@@ -6,9 +6,9 @@
   "module": "./dist/esm/index.mjs",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "dev": "../../scripts/build.sh -w",
-    "build": "cross-env NODE_ENV=production ../../scripts/build.sh",
-    "generate-ast": "./scripts/generate-ast.js"
+    "dev": "node ../../scripts/build.js -w",
+    "build": "cross-env NODE_ENV=production node ../../scripts/build.js",
+    "generate-ast": "node ./scripts/generate-ast.js"
   },
   "keywords": [],
   "author": "Prev Wong",

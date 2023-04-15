@@ -6,8 +6,8 @@
   "module": "./dist/esm/index.mjs",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "dev": "../../scripts/build.sh -w",
-    "build": "cross-env NODE_ENV=production ../../scripts/build.sh"
+    "dev": "node ../../scripts/build.js -w",
+    "build": "cross-env NODE_ENV=production node ../../scripts/build.js"
   },
   "keywords": [],
   "author": "Prev Wong",

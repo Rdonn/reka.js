@@ -6,10 +6,10 @@
   "module": "./dist/esm/index.mjs",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "generate-lezer-parser": "mkdir -p src/parser && lezer-generator src/reka.grammar -o src/parser/index.js && pnpm -w run lint:fix",
+    "generate-lezer-parser": "shx mkdir -p src/parser && lezer-generator src/reka.grammar -o src/parser/index.js && pnpm -w run lint:fix",
     "generate-lezer-parser:watch": "nodemon --watch src/reka.grammar -x pnpm run generate-lezer-parser",
-    "rollup:watch": "../../scripts/build.sh -w",
-    "rollup:build": "../../scripts/build.sh",
+    "rollup:watch": "node ../../scripts/build.js -w",
+    "rollup:build": "node ../../scripts/build.js",
     "dev": "run-p rollup:watch generate-lezer-parser:watch",
     "build": "run-s generate-lezer-parser rollup:build"
   },
@@ -23,6 +23,7 @@
     "@lezer/lr": "^1.3.3"
   },
   "devDependencies": {
-    "@lezer/generator": "^1.2.2"
+    "@lezer/generator": "^1.2.2",
+    "shx": "^0.3.4"
   }
 }

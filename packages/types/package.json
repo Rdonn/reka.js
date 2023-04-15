@@ -8,9 +8,9 @@
   "scripts": {
     "generate-ast": "./scripts/generate-ast.js",
     "generate-ast:watch": "nodemon --watch src/types.definition.ts -x ./scripts/generate-ast.js",
-    "rollup:watch": "../../scripts/build.sh -w",
+    "rollup:watch": "node ../../scripts/build.js -w",
     "dev": "run-p rollup:watch generate-ast:watch",
-    "build": "../../scripts/build.sh"
+    "build": "node ../../scripts/build.js"
   },
   "keywords": [],
   "author": "Prev Wong",

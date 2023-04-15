@@ -8,7 +8,7 @@
   "scripts": {
     "build:types": "tsc -p .",
     "dev": "../../scripts/build.sh -w",
-    "build": "cross-env NODE_ENV=production ../../scripts/build.sh"
+    "build": "cross-env NODE_ENV=production node ../../scripts/build.js"
   },
   "keywords": [],
   "author": "Prev Wong",
